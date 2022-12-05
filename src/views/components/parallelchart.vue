@@ -291,7 +291,7 @@ export default {
                             .append("g")
                             .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-            const x = d3.scaleLinear().domain([0, d3.max(data, d => d.average_playtime_forever)]).range([0, width]);
+            const x = d3.scaleLinear().domain([d3.min(data, d => d.average_playtime_forever), d3.max(data, d => d.average_playtime_forever)]).range([0, width]);
 
             svg.append("g")
                 .attr("transform", `translate(0, ${height})`)
