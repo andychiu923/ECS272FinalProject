@@ -322,9 +322,9 @@ export default {
             const mousemove = function(event, d) {
                 tooltip
                     .html(`Name: ${d.name}<br>
-                           Genre: ${d.genres}`)
-                    .style("left", (event.x)/8 + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
-                    .style("top", (event.y)/8 + "px")
+                           Release data: ${d.release_date}`)
+                    .style("left", (event.x)/9 + 70 + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
+                    .style("top", (event.y)/9 + "px")
             }
 
             const mouseleave = function(event,d) {
